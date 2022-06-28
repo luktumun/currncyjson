@@ -14,10 +14,10 @@
       background: url(https://www.ubuntupit.com/wp-content/uploads/2019/01/Best-War-Games-for-Android-696x392.jpg) right bottom no-repeat, url(https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?cs=srgb&dl=pexels-mike-1171084.jpg&fm=jpg) left top repeat;
   padding: 15px;
 
-        background-color: white;
+        background-color: rgb(109, 116, 177);
         border-style:solid;
-        border-width: 1px;
-        border-color: darkgreen;
+        border-width: 1.5px;
+        border-color: rgb(10, 230, 10);
         margin-bottom: 20px;
         margin-top: 20px;
         -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
@@ -45,6 +45,16 @@
     input:focus::-webkit-input-placeholder{
         color: transparent;
     }
+   
+      hr {
+        position: relative;
+        top: 20px;
+        border: none;
+        height: 2px;
+        background: rgb(143, 199, 162);
+        margin-bottom: 50px;
+    }
+    
    </style>
     <script src="https://kit.fontawesome.com/e1f93e03c9.js"></script>
     <title>Soccer Matches And War GamesTorrent s</title>
@@ -83,14 +93,198 @@ padding: 15px;">
           </div>
           <div class="text" style="font-size: 1.3em; color:rgb(46, 43, 226)">
             <p>To download war games and latest soccer matches torrents please types in the search box...</p>
-            <p>type youe favoriote football club name for football matches torrent and type name of your favoriote game...</p>
+            <p>type your favoriote football club name for football matches torrent and type name of your favoriote game...</p>
           </div>
          
       </section>
         
     </div>
+  
+
+
+</div>
+<hr>
+<div class="container" style="text-align: center;width: 100%; margin: 2 auto; background: rgba(219, 217, 226, 0);font-size: 1.3em; color:rgb(240, 15, 15)"> 
+ 
+  <br>
+  <br>
+  
+   <div class="centered">
+    <p id="searchlink1">Switzerland - Portugal 12.06.2022</p>
+  
+  </div>
+  <div class="bottom-centered">
+  <img src="https://www.sport-video.org.ua/images/SP1206222.jpg" alt="Torrent" style="width:33%;">
+  </div>
+  
+<hr>
+
+  <div class="centered">
+    <p id="searchlink2">Hungary - Germany 11.06.2022</p>
+  
+  </div>
+  <div class="bottom-centered">
+  <img src="https://www.sport-video.org.ua/images/HG1106222.jpg" alt="Torrent" style="width:33%;">
+  </div>
+  
+  <hr>
+  <div class="centered">
+    <p id="searchlink3">Italy - Argentina 01.06.2022</p>
+  
+  </div>
+  <div class="bottom-centered">
+  <img src="https://www.sport-video.org.ua/images/IA0106222.jpg" alt="Torrent" style="width:33%;">
+  </div>
+  
+  <hr>
+  <div class="centered">
+    <p id="searchlink4">Seattle Sounders FC - Los Angeles FC 18.06.2022</p>
+  
+  </div>
+  <div class="bottom-centered">
+  <img src="https://www.sport-video.org.ua/images/SSLAFC1806222.jpg" alt="Torrent" style="width:33%;">
+  </div>
+  
+  <hr>
+  <div class="centered">
+    <p id="searchlink5">PSG - Troyes 08.05.2022</p>
+  
+  </div>
+  <div class="bottom-centered">
+  <img src="https://www.sport-video.org.ua/images/PSGT0805221.jpg" alt="Torrent" style="width:33%;">
+  </div>
+  <hr>
 </div>
 <script>
+  
+  const p1 = document.getElementById('searchlink1');
+  const p2 = document.getElementById('searchlink2');
+  const p3 = document.getElementById('searchlink3');
+  const p4 = document.getElementById('searchlink4');
+  const p5 = document.getElementById('searchlink5');
+
+const result1 = p1.textContent;
+const result2 = p2.textContent;
+const result3 = p3.textContent;
+const result4 = p4.textContent;
+const result5 = p5.textContent;
+
+document.getElementById("searchlink1").onclick = function() {searchAction()};
+document.getElementById("searchlink2").onclick = function() {searchAction()};
+document.getElementById("searchlink3").onclick = function() {searchAction()};
+document.getElementById("searchlink4").onclick = function() {searchAction()};
+document.getElementById("searchlink5").onclick = function() {searchAction()};
+
+function searchAction(){
+        let searchString1 = result1;
+        let searchString2 = result2;
+        let searchString3 = result3;
+        let searchString4 = result4;
+        let searchString5 = result5;
+
+
+
+
+        let txt = "";
+        console.log(searchString1);
+        console.log(searchString2);
+        console.log(searchString3);
+        console.log(searchString4);
+        console.log(searchString5);
+        let webhook_url = "https://webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-hwpod/service/searchengineserv/incoming_webhook/listtorrents";
+        let url1 = webhook_url + "?arg=" + searchString1;
+        let url2 = webhook_url + "?arg=" + searchString2;
+        let url3 = webhook_url + "?arg=" + searchString3;
+        let url4 = webhook_url + "?arg=" + searchString4;
+        let url5 = webhook_url + "?arg=" + searchString5;
+
+
+
+
+        function handleResponse(response) {
+          if(!response.ok){
+            console.log(response);
+            txt += `<br><br><br><b><h3>Sadly you have an error. Status: ${response.status}`;
+            if (response.json.length === 0) {
+              txt+=`<br><br><p style="color:yellow">Make sure to search for some type of movie. Don't leave your search box empty.</p></h3></b>`;
+            }
+            document.getElementById("results").innerHTML = txt;
+            throw new Error(response.statusText);
+          }
+          return response.json();
+        }
+        function renderMovieData(movieJSON) {
+          if (movieJSON["$undefined"] === true) {
+              console.log('NO FETCH RESULT');
+              txt += `<br><br><br><b><h3><p style="color:yellow">IMPLEMENT FULL TEXT SEARCH AGGREGATION TO SEARCH TORRENT COLLECTION</p></h3></b>`;
+          } else {
+            console.log("FETCHED RESULT... "  );
+            console.log("Fetched array has " + movieJSON.length + " entries");
+            if (movieJSON.length !== 0) {
+              txt = buildMovieList(movieJSON);
+            } else {
+              txt += `<br><br><br><b><h3><p style="color:yellow">Sadly you have no search results. Try checking your spelling or changing your search terms.</p></h3></b>`;
+            }
+          }
+          document.getElementById("results").innerHTML = txt;
+        }
+        fetch(url1)
+          .then(handleResponse)
+          .then(renderMovieData)
+          .catch(function(error){
+              console.error('Whoopsie!', error);
+          });
+          fetch(url2)
+          .then(handleResponse)
+          .then(renderMovieData)
+          .catch(function(error){
+              console.error('Whoopsie!', error);
+          });
+          fetch(url3)
+          .then(handleResponse)
+          .then(renderMovieData)
+          .catch(function(error){
+              console.error('Whoopsie!', error);
+          });
+          fetch(url4)
+          .then(handleResponse)
+          .then(renderMovieData)
+          .catch(function(error){
+              console.error('Whoopsie!', error);
+          });
+          fetch(url5)
+          .then(handleResponse)
+          .then(renderMovieData)
+          .catch(function(error){
+              console.error('Whoopsie!', error);
+          });
+    }
+    function buildMovieList(torrentfiles){
+        // HELPER FUNCTION FOR USER ACTION
+        let txt = "";
+        torrentfiles.forEach(movie => {
+          txt += `
+          <br> <br>
+            <br> <b><p style="color:blue">${movie.soccermatch }</p></b>
+            <br> <b><p style="color:blue">Description:  ${movie.description} </p></b>
+            <br> <br>
+           
+            <br> <br>
+          `;
+          movie.highlight.forEach(highlight => {
+            highlight.texts.forEach(text => {
+              if (text.type === "hit") {
+                  txt += `<b><mark> ${text.value} </mark></b>`;
+              } else {
+                  txt += text.value;
+              }
+            })
+          })
+          txt += "<hr>"
+        })
+        return txt;
+    };
+
     function userAction(){
         let searchString = document.getElementById("myInput").value;
         let txt = "";
@@ -102,7 +296,7 @@ padding: 15px;">
             console.log(response);
             txt += `<br><br><br><b><h3>Sadly you have an error. Status: ${response.status}`;
             if (response.json.length === 0) {
-              txt+=`<br><br>Make sure to search for some type of movie. Don't leave your search box empty.</h3></b>`;
+              txt+=`<br><br><p style="color:yellow">Make sure to search for some type of movie. Don't leave your search box empty.</p></h3></b>`;
             }
             document.getElementById("results").innerHTML = txt;
             throw new Error(response.statusText);
@@ -112,14 +306,14 @@ padding: 15px;">
         function renderMovieData(movieJSON) {
           if (movieJSON["$undefined"] === true) {
               console.log('NO FETCH RESULT');
-              txt += `<br><br><br><b><h3>IMPLEMENT FULL TEXT SEARCH AGGREGATION TO SEARCH MOVIE COLLECTION</h3></b>`;
+              txt += `<br><br><br><b><h3><p style="color:yellow">IMPLEMENT FULL TEXT SEARCH AGGREGATION TO SEARCH TORRENT COLLECTION</p></h3></b>`;
           } else {
             console.log("FETCHED RESULT... "  );
             console.log("Fetched array has " + movieJSON.length + " entries");
             if (movieJSON.length !== 0) {
               txt = buildMovieList(movieJSON);
             } else {
-              txt += `<br><br><br><b><h3>Sadly you have no search results. Try checking your spelling or changing your search terms.</h3></b>`;
+              txt += `<br><br><br><b><h3><p style="color:yellow">Sadly you have no search results. Try checking your spelling or changing your search terms.</p></h3></b>`;
             }
           }
           document.getElementById("results").innerHTML = txt;
@@ -137,7 +331,7 @@ padding: 15px;">
         torrentfiles.forEach(movie => {
           txt += `
             <br> <b><p style="color:blue">${movie.soccermatch }</p></b>
-            <br> <b><p style="color:blue">Description:  ${movie.description} </b>
+            <br> <b><p style="color:blue">Description:  ${movie.description} </p></b>
             <br> <br>
            <a href= " ${movie.torrentdownloadlink}" <p style="color:red">Click Here to download this full match torrent</p></a>
            
