@@ -1,355 +1,135 @@
-
-<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <style>
-    .jumbotron {
-      background: url(https://www.ubuntupit.com/wp-content/uploads/2019/01/Best-War-Games-for-Android-696x392.jpg) right bottom no-repeat, url(https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?cs=srgb&dl=pexels-mike-1171084.jpg&fm=jpg) left top repeat;
-  padding: 15px;
+    <head>
+        <meta content="text/html; charset=windows-1252"
+          http-equiv="Content-Type">
+        <title>Javascript Game</title>
 
-        background-color: rgb(109, 116, 177);
-        border-style:solid;
-        border-width: 1.5px;
-        border-color: rgb(10, 230, 10);
-        margin-bottom: 20px;
-        margin-top: 20px;
-        -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-        -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-        box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
-        zoom: 1;
-    }
-    .fa-search {
-        color: green;
-        padding-top: 10px;
-        font-size: 32px;
-    }
-    #box {
-        border-radius: 25px;
-        border: 1px solid white;
-        box-shadow: 0 0 5px gray;
-    }
-    .form-control:focus {
-        border-color: inherit;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-    input:focus::-webkit-input-placeholder{
-        color: transparent;
-    }
+    </head>
+    <body  alink="#EE0000" bgcolor="white" link="#0000EE" text="#000000"
+        vlink="#551A8B">
+        <script>
+const ItemList = () => {
+  const [externalItems, setExternalItems] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.coincap.io/v2/assets")
+      .then((response) => response.json())
+      .then((data) => setExternalItems(data));
+  }, []);
+
+           
+        }
+        </script>
+
+     
+   <pre style="word-wrap: break-word; white-space: pre-wrap;">
+    {"coinimg":"https://assets.coincap.io/assets/icons/btc@2x.png" ,"rank":"1"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/eth@2x.png" ,"rank":"2"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/usdt@2x.png" ,"rank":"3"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/bnb@2x.png" ,"rank":"4"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/sol@2x.png" ,"rank":"5"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/usdc@2x.png" ,"rank":"6"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/xrp@2x.png" ,"rank":"7"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/ada@2x.png" ,"rank":"8"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/doge@2x.png" ,"rank":"9"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/avax@2x.png" ,"rank":"10"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/trx@2x.png" ,"rank":"11"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/dot@2x.png" ,"rank":"12"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/link@2x.png" ,"rank":"13"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/matic@2x.png" ,"rank":"14"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/wbtc@2x.png" ,"rank":"15"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/dai@2x.png" ,"rank":"16"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/shib@2x.png" ,"rank":"17"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/ltc@2x.png" ,"rank":"18"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/icp@2x.png" ,"rank":"19"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/bch@2x.png" ,"rank":"20"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/leo@2x.png" ,"rank":"21"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/uni@2x.png" ,"rank":"22"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/etc@2x.png" ,"rank":"23"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/xlm@2x.png" ,"rank":"24"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/okb@2x.png" ,"rank":"25"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/xmr@2x.png" ,"rank":"26"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/near@2x.png" ,"rank":"27"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/fil@2x.png" ,"rank":"28"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/inj@2x.png" ,"rank":"29"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/ldo@2x.png" ,"rank":"30"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/atom@2x.png" ,"rank":"31"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/btcb@2x.png" ,"rank":"32"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/cro@2x.png" ,"rank":"33"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/stx@2x.png" ,"rank":"34"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/vet@2x.png" ,"rank":"35"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/tusd@2x.png" ,"rank":"36"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/mkr@2x.png" ,"rank":"37"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/rndr@2x.png" ,"rank":"38"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/grt@2x.png" ,"rank":"39"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/bsv@2x.png" ,"rank":"40"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/rune@2x.png" ,"rank":"41"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/aave@2x.png" ,"rank":"42"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/algo@2x.png" ,"rank":"43"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/qnt@2x.png" ,"rank":"44"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/egld@2x.png" ,"rank":"45"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/flow@2x.png" ,"rank":"46"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/mina@2x.png" ,"rank":"47"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/hbar@2x.png" ,"rank":"48"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/axs@2x.png" ,"rank":"49"},
+ {"coinimg":"https://assets.coincap.io/assets/icons/sand@2x.png" ,"rank":"50"},
+{"coinimg":"https://assets.coincap.io/assets/icons/hnt@2x.png" ,"rank":"51"},
+{"coinimg":"https://assets.coincap.io/assets/icons/theta@2x.png" ,"rank":"52"},
+{"coinimg":"https://assets.coincap.io/assets/icons/ftm@2x.png" ,"rank":"53"},
+{"coinimg":"https://assets.coincap.io/assets/icons/kcs@2x.png" ,"rank":"54"},
+{"coinimg":"https://assets.coincap.io/assets/icons/xtz@2x.png" ,"rank":"55"},
+{"coinimg":"https://assets.coincap.io/assets/icons/ftt@2x.png" ,"rank":"56"},
+{"coinimg":"https://assets.coincap.io/assets/icons/wemix@2x.png" ,"rank":"57"},
+{"coinimg":"https://assets.coincap.io/assets/icons/chz@2x.png" ,"rank":"58"},
+{"coinimg":"https://assets.coincap.io/assets/icons/mana@2x.png" ,"rank":"59"},
+{"coinimg":"https://assets.coincap.io/assets/icons/kava@2x.png" ,"rank":"60"},
+{"coinimg":"https://assets.coincap.io/assets/icons/eos@2x.png" ,"rank":"61"},
+{"coinimg":"https://assets.coincap.io/assets/icons/neo@2x.png" ,"rank":"62"},
+{"coinimg":"https://assets.coincap.io/assets/icons/snx@2x.png" ,"rank":"63"},
+{"coinimg":"https://assets.coincap.io/assets/icons/sc@2x.png" ,"rank":"64"},
+{"coinimg":"https://assets.coincap.io/assets/icons/fxs@2x.png" ,"rank":"65"},
+{"coinimg":"https://assets.coincap.io/assets/icons/klay@2x.png" ,"rank":"66"},
+{"coinimg":"https://assets.coincap.io/assets/icons/cfx@2x.png" ,"rank":"67"},
+{"coinimg":"https://assets.coincap.io/assets/icons/iota@2x.png" ,"rank":"68"},
+{"coinimg":"https://assets.coincap.io/assets/icons/woo@2x.png" ,"rank":"69"},
+{"coinimg":"https://assets.coincap.io/assets/icons/rose@2x.png" ,"rank":"70"},
+{"coinimg":"https://assets.coincap.io/assets/icons/cake@2x.png" ,"rank":"71"},
+{"coinimg":"https://assets.coincap.io/assets/icons/gala@2x.png" ,"rank":"72"},
+{"coinimg":"https://assets.coincap.io/assets/icons/xec@2x.png" ,"rank":"73"},
+{"coinimg":"https://assets.coincap.io/assets/icons/xdc@2x.png" ,"rank":"74"},
+{"coinimg":"https://assets.coincap.io/assets/icons/ar@2x.png" ,"rank":"75"},
+{"coinimg":"https://assets.coincap.io/assets/icons/crv@2x.png" ,"rank":"76"},
+{"coinimg":"https://assets.coincap.io/assets/icons/gno@2x.png" ,"rank":"77"},
+{"coinimg":"https://assets.coincap.io/assets/icons/akt@2x.png" ,"rank":"78"},
+{"coinimg":"https://assets.coincap.io/assets/icons/dydx@2x.png" ,"rank":"79"},
+{"coinimg":"https://assets.coincap.io/assets/icons/cspr@2x.png" ,"rank":"80"},
+{"coinimg":"https://assets.coincap.io/assets/icons/pendle@2x.png" ,"rank":"81"},
+{"coinimg":"https://assets.coincap.io/assets/icons/fet@2x.png" ,"rank":"82"},
+{"coinimg":"https://assets.coincap.io/assets/icons/gt@2x.png" ,"rank":"83"},
+{"coinimg":"https://assets.coincap.io/assets/icons/uma@2x.png" ,"rank":"84"},
+{"coinimg":"https://assets.coincap.io/assets/icons/twt@2x.png" ,"rank":"85"},
+{"coinimg":"https://assets.coincap.io/assets/icons/1inch@2x.png" ,"rank":"86"},
+{"coinimg":"https://assets.coincap.io/assets/icons/nexo@2x.png" ,"rank":"87"},
+{"coinimg":"https://assets.coincap.io/assets/icons/comp@2x.png" ,"rank":"88"},
+{"coinimg":"https://assets.coincap.io/assets/icons/elf@2x.png" ,"rank":"89"},
+{"coinimg":"https://assets.coincap.io/assets/icons/fei@2x.png" ,"rank":"90"},
+{"coinimg":"https://assets.coincap.io/assets/icons/xem@2x.png" ,"rank":"91"},
+{"coinimg":"https://assets.coincap.io/assets/icons/iotx@2x.png" ,"rank":"92"},
+{"coinimg":"https://assets.coincap.io/assets/icons/gas@2x.png" ,"rank":"93"},
+{"coinimg":"https://assets.coincap.io/assets/icons/enj@2x.png" ,"rank":"94"},
+{"coinimg":"https://assets.coincap.io/assets/icons/zec@2x.png" ,"rank":"95"},
+{"coinimg":"https://assets.coincap.io/assets/icons/usdp@2x.png" ,"rank":"96"},
+{"coinimg":"https://assets.coincap.io/assets/icons/zil@2x.png" ,"rank":"97"},
+{"coinimg":"https://assets.coincap.io/assets/icons/skl@2x.png" ,"rank":"98"},
+{"coinimg":"https://assets.coincap.io/assets/icons/celo@2x.png" ,"rank":"99"},
+{"coinimg":"https://assets.coincap.io/assets/icons/nxm@2x.png" ,"rank":"100"}
+
+
+
+</pre>
    
-      hr {
-        position: relative;
-        top: 20px;
-        border: none;
-        height: 2px;
-        background: rgb(143, 199, 162);
-        margin-bottom: 50px;
-    }
-    
-   </style>
-    <script src="https://kit.fontawesome.com/e1f93e03c9.js"></script>
-    <title>Soccer Matches And War GamesTorrent s</title>
-</head>
-<body>
-<div class="container" style="background: url(https://www.ubuntupit.com/wp-content/uploads/2019/01/Best-War-Games-for-Android-696x392.jpg) right bottom no-repeat, url(https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?cs=srgb&dl=pexels-mike-1171084.jpg&fm=jpg) left top repeat;
-padding: 15px;">
-    <header class="jumbotron">
-        <div class="row">
-                <div class="col-3 view overlay">
-                </div>
-            <!-- Grid column -->
-            <div class="col-9">
-                <h1 style="text-align:center;color:blue">Soccer Matches And War GamesTorrent s </h1>
-                <br>
-                <div class="row" id="box">
-                    <div class="col-11">
-                        <form onsubmit="userAction()" action="javascript:">
-                            <input type="text" onsubmit="userAction()" autocomplete="off" id="myInput" class="form-control" placeholder="suggested keywords: seattle,football,matches,war games,torrents..." aria-label="Search" style="font-size: 1em; border:none">
-                        </form>
-                    </div>
-                    <div class="col-1">
-                        <span><i class="fa fa-search" aria-hidden="true" onclick="userAction()" ></i></span>
-                    </div>
-                </div>
-            </div>
-            <br>
-        </div>
-    </header>
-    <div>
-      <section id="bg">
+
+   
        
-        <div class="container">
-          <div class="row">
-            <p id="results" style="font-size: 1.8em"></p>
-          </div>
-          <div class="text" style="font-size: 1.3em; color:rgb(46, 43, 226)">
-            <p>To download war games and latest soccer matches torrents please types in the search box...</p>
-            <p>type your favoriote football club name for football matches torrent and type name of your favoriote game...</p>
-          </div>
-         
-      </section>
-        
-    </div>
-  
-
-
-</div>
-<hr>
-<div class="container" style="text-align: center;width: 100%; margin: 2 auto; background: rgba(219, 217, 226, 0);font-size: 1.3em; color:rgb(240, 15, 15)"> 
- 
-  <br>
-  <br>
-  
-   <div class="centered">
-    <p id="searchlink1">Switzerland - Portugal 12.06.2022</p>
-  
-  </div>
-  <div class="bottom-centered">
-  <img src="https://www.sport-video.org.ua/images/SP1206222.jpg" alt="Torrent" style="width:33%;">
-  </div>
-  
-<hr>
-
-  <div class="centered">
-    <p id="searchlink2">Hungary - Germany 11.06.2022</p>
-  
-  </div>
-  <div class="bottom-centered">
-  <img src="https://www.sport-video.org.ua/images/HG1106222.jpg" alt="Torrent" style="width:33%;">
-  </div>
-  
-  <hr>
-  <div class="centered">
-    <p id="searchlink3">Italy - Argentina 01.06.2022</p>
-  
-  </div>
-  <div class="bottom-centered">
-  <img src="https://www.sport-video.org.ua/images/IA0106222.jpg" alt="Torrent" style="width:33%;">
-  </div>
-  
-  <hr>
-  <div class="centered">
-    <p id="searchlink4">Seattle Sounders FC - Los Angeles FC 18.06.2022</p>
-  
-  </div>
-  <div class="bottom-centered">
-  <img src="https://www.sport-video.org.ua/images/SSLAFC1806222.jpg" alt="Torrent" style="width:33%;">
-  </div>
-  
-  <hr>
-  <div class="centered">
-    <p id="searchlink5">PSG - Troyes 08.05.2022</p>
-  
-  </div>
-  <div class="bottom-centered">
-  <img src="https://www.sport-video.org.ua/images/PSGT0805221.jpg" alt="Torrent" style="width:33%;">
-  </div>
-  <hr>
-</div>
-<script>
-  
-  const p1 = document.getElementById('searchlink1');
-  const p2 = document.getElementById('searchlink2');
-  const p3 = document.getElementById('searchlink3');
-  const p4 = document.getElementById('searchlink4');
-  const p5 = document.getElementById('searchlink5');
-
-const result1 = p1.textContent;
-const result2 = p2.textContent;
-const result3 = p3.textContent;
-const result4 = p4.textContent;
-const result5 = p5.textContent;
-
-document.getElementById("searchlink1").onclick = function() {searchAction()};
-document.getElementById("searchlink2").onclick = function() {searchAction()};
-document.getElementById("searchlink3").onclick = function() {searchAction()};
-document.getElementById("searchlink4").onclick = function() {searchAction()};
-document.getElementById("searchlink5").onclick = function() {searchAction()};
-
-function searchAction(){
-        let searchString1 = result1;
-        let searchString2 = result2;
-        let searchString3 = result3;
-        let searchString4 = result4;
-        let searchString5 = result5;
-
-
-
-
-        let txt = "";
-        console.log(searchString1);
-        console.log(searchString2);
-        console.log(searchString3);
-        console.log(searchString4);
-        console.log(searchString5);
-        let webhook_url = "https://webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-hwpod/service/searchengineserv/incoming_webhook/listtorrents";
-        let url1 = webhook_url + "?arg=" + searchString1;
-        let url2 = webhook_url + "?arg=" + searchString2;
-        let url3 = webhook_url + "?arg=" + searchString3;
-        let url4 = webhook_url + "?arg=" + searchString4;
-        let url5 = webhook_url + "?arg=" + searchString5;
-
-
-
-
-        function handleResponse(response) {
-          if(!response.ok){
-            console.log(response);
-            txt += `<br><br><br><b><h3>Sadly you have an error. Status: ${response.status}`;
-            if (response.json.length === 0) {
-              txt+=`<br><br><p style="color:yellow">Make sure to search for some type of movie. Don't leave your search box empty.</p></h3></b>`;
-            }
-            document.getElementById("results").innerHTML = txt;
-            throw new Error(response.statusText);
-          }
-          return response.json();
-        }
-        function renderMovieData(movieJSON) {
-          if (movieJSON["$undefined"] === true) {
-              console.log('NO FETCH RESULT');
-              txt += `<br><br><br><b><h3><p style="color:yellow">IMPLEMENT FULL TEXT SEARCH AGGREGATION TO SEARCH TORRENT COLLECTION</p></h3></b>`;
-          } else {
-            console.log("FETCHED RESULT... "  );
-            console.log("Fetched array has " + movieJSON.length + " entries");
-            if (movieJSON.length !== 0) {
-              txt = buildMovieList(movieJSON);
-            } else {
-              txt += `<br><br><br><b><h3><p style="color:yellow">Sadly you have no search results. Try checking your spelling or changing your search terms.</p></h3></b>`;
-            }
-          }
-          document.getElementById("results").innerHTML = txt;
-        }
-        fetch(url1)
-          .then(handleResponse)
-          .then(renderMovieData)
-          .catch(function(error){
-              console.error('Whoopsie!', error);
-          });
-          fetch(url2)
-          .then(handleResponse)
-          .then(renderMovieData)
-          .catch(function(error){
-              console.error('Whoopsie!', error);
-          });
-          fetch(url3)
-          .then(handleResponse)
-          .then(renderMovieData)
-          .catch(function(error){
-              console.error('Whoopsie!', error);
-          });
-          fetch(url4)
-          .then(handleResponse)
-          .then(renderMovieData)
-          .catch(function(error){
-              console.error('Whoopsie!', error);
-          });
-          fetch(url5)
-          .then(handleResponse)
-          .then(renderMovieData)
-          .catch(function(error){
-              console.error('Whoopsie!', error);
-          });
-    }
-    function buildMovieList(torrentfiles){
-        // HELPER FUNCTION FOR USER ACTION
-        let txt = "";
-        torrentfiles.forEach(movie => {
-          txt += `
-          <br> <br>
-            <br> <b><p style="color:blue">${movie.soccermatch }</p></b>
-            <br> <b><p style="color:blue">Description:  ${movie.description} </p></b>
-            <br> <br>
-           
-            <br> <br>
-          `;
-          movie.highlight.forEach(highlight => {
-            highlight.texts.forEach(text => {
-              if (text.type === "hit") {
-                  txt += `<b><mark> ${text.value} </mark></b>`;
-              } else {
-                  txt += text.value;
-              }
-            })
-          })
-          txt += "<hr>"
-        })
-        return txt;
-    };
-
-    function userAction(){
-        let searchString = document.getElementById("myInput").value;
-        let txt = "";
-        console.log(searchString);
-        let webhook_url = "https://webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-hwpod/service/searchengineserv/incoming_webhook/listtorrents";
-        let url = webhook_url + "?arg=" + searchString;
-        function handleResponse(response) {
-          if(!response.ok){
-            console.log(response);
-            txt += `<br><br><br><b><h3>Sadly you have an error. Status: ${response.status}`;
-            if (response.json.length === 0) {
-              txt+=`<br><br><p style="color:yellow">Make sure to search for some type of movie. Don't leave your search box empty.</p></h3></b>`;
-            }
-            document.getElementById("results").innerHTML = txt;
-            throw new Error(response.statusText);
-          }
-          return response.json();
-        }
-        function renderMovieData(movieJSON) {
-          if (movieJSON["$undefined"] === true) {
-              console.log('NO FETCH RESULT');
-              txt += `<br><br><br><b><h3><p style="color:yellow">IMPLEMENT FULL TEXT SEARCH AGGREGATION TO SEARCH TORRENT COLLECTION</p></h3></b>`;
-          } else {
-            console.log("FETCHED RESULT... "  );
-            console.log("Fetched array has " + movieJSON.length + " entries");
-            if (movieJSON.length !== 0) {
-              txt = buildMovieList(movieJSON);
-            } else {
-              txt += `<br><br><br><b><h3><p style="color:yellow">Sadly you have no search results. Try checking your spelling or changing your search terms.</p></h3></b>`;
-            }
-          }
-          document.getElementById("results").innerHTML = txt;
-        }
-        fetch(url)
-          .then(handleResponse)
-          .then(renderMovieData)
-          .catch(function(error){
-              console.error('Whoopsie!', error);
-          });
-    }
-    function buildMovieList(torrentfiles){
-        // HELPER FUNCTION FOR USER ACTION
-        let txt = "";
-        torrentfiles.forEach(movie => {
-          txt += `
-            <br> <b><p style="color:blue">${movie.soccermatch }</p></b>
-            <br> <b><p style="color:blue">Description:  ${movie.description} </p></b>
-            <br> <br>
-           <a href= " ${movie.torrentdownloadlink}" <p style="color:red">Click Here to download this full match torrent</p></a>
-           
-            <br> <br>
-          `;
-          movie.highlight.forEach(highlight => {
-            highlight.texts.forEach(text => {
-              if (text.type === "hit") {
-                  txt += `<b><mark> ${text.value} </mark></b>`;
-              } else {
-                  txt += text.value;
-              }
-            })
-          })
-          txt += "<hr>"
-        })
-        return txt;
-    }
-</script>
-</body>
+    </body>
 </html>
